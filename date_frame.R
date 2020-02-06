@@ -1,30 +1,31 @@
+#åˆ©ç”¨ræ„å»ºæ•°æ®æ¡†
 patientID <- c(1,2,3,4)
-age <- c(10,20,30,40)   #Á¬ĞøĞÍ±äÁ¿
-diabetes <- c("Type1","Type2","Type1","Type2") #ÃûÒåĞÍ±äÁ¿
-status <- c("poor","Improved","Excellent","Poor")  #ÓĞĞòĞÍ±äÁ¿
+age <- c(10,20,30,40)   #è¿ç»­å‹å˜é‡
+diabetes <- c("Type1","Type2","Type1","Type2") #åä¹‰å‹å˜é‡
+status <- c("poor","Improved","Excellent","Poor")  #æœ‰åºå‹å˜é‡
 
 patitentdata <- data.frame(patientID,age,diabetes,status)
 print(patitentdata)
 
-#¶ÁÈ¡Êı¾İ¿òÖĞµÄÔªËØ
+#è¯»å–æ•°æ®æ¡†ä¸­çš„å…ƒç´ 
 print(patitentdata[c(1,2)])
 print(patitentdata[c("age","diabetes")])
 
 print(patitentdata$status)
 print(patitentdata$age)
 
-#Éú³É±í¸ñ
+#ç”Ÿæˆè¡¨æ ¼
 print(table(patitentdata$diabetes,patitentdata$status))
 
-#¶ÔÊı¾İ¿òÖĞµÄ±äÁ¿½øĞĞ²Ù×÷
+#å¯¹æ•°æ®æ¡†ä¸­çš„å˜é‡è¿›è¡Œæ“ä½œ
 with(patitentdata,{print(summary(age))})
 
-#ÊµÀı±êÊ¶·û£º¿ÉÍ¨¹ıº¯Êı¡°rowname"Ö¸¶¨
+#å®ä¾‹æ ‡è¯†ç¬¦ï¼šå¯é€šè¿‡å‡½æ•°â€œrowname"æŒ‡å®š
 patitentdata <- data.frame(patientID,age,diabetes,status,row.names = patientID)
 print(patitentdata)
 
 
-#Òò×Ó
+#å› å­
 patientID <- c(1,2,3,4)
 age <- c(10,20,30,40)
 diabetes <- c("Type1","Type2","Type1","Type2") 
